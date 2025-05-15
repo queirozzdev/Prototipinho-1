@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- isso aqui é o cabeçalho da página com meta informações e links para estilos -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Campanha - HemoByte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-fixed.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- isso aqui é o cabeçalho fixo do site com logo e menu de navegação -->
+    <header class="top-header">
+        <div class="logo-container">
+            <a href="hemobyte.html" class="logo-link">
+                <i class="fas fa-tint"></i>
+                <span class="logo-text">HemoByte</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="hemobyte.html" title="Início"><i class="fas fa-home"></i></a></li>
+                <li><a href="campanhas-ativas.html" title="Campanhas"><i class="fas fa-map-marker-alt"></i></a></li>
+                <li><a href="criar-campanha.html" class="active" title="Criar Campanha"><i class="fas fa-plus-circle"></i></a></li>
+                <li><a href="sobre.html" title="Sobre"><i class="fas fa-info-circle"></i></a></li>
+                <li><a href="login.html" title="Login"><i class="fas fa-user"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- isso aqui é o conteúdo principal da página -->
+    <main class="criar-campanha-page">
+        <h1>Criar Nova Campanha de Doação</h1>
+        <p class="subtitle">Organize uma campanha de doação de sangue em seu bairro e ajude a transformar Feira de Santana. Preencha o formulário abaixo com os detalhes da sua campanha.</p>
+
+        <form class="campaign-form">
+            <!-- Informações Básicas -->
+            <section class="form-section">
+                <h2><i class="fas fa-info-circle"></i> Informações Básicas</h2>
+                
+                <div class="form-group">
+                    <label>Nome da Campanha*</label>
+                    <input type="text" placeholder="Ex: Doe Vida - Bairro Feira VI" required>
+                    <span class="form-hint">Escolha um nome claro e atrativo para sua campanha</span>
+                </div>
+
+                <div class="form-group">
+                    <label>Tipo de Campanha*</label>
+                    <select required>
+                        <option value="">Selecione o tipo</option>
+                        <option value="urgente">Urgente</option>
+                        <option value="regular">Regular</option>
+                        <option value="especial">Especial</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Descrição da Campanha*</label>
+                    <textarea placeholder="Descreva os objetivos da campanha e como a comunidade pode participar" required></textarea>
+                </div>
+            </section>
+
+            <!-- Localização -->
+            <section class="form-section">
+                <h2><i class="fas fa-map-marker-alt"></i> Localização</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Bairro*</label>
+                        <select required>
+                            <option value="">Selecione o bairro</option>
+                            <option value="feira-vi">Feira VI</option>
+                            <option value="tomba">Tomba</option>
+                            <option value="centro">Centro</option>
+                            <option value="queimadinha">Queimadinha</option>
+                            <option value="cidade-nova">Cidade Nova</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Local Específico*</label>
+                        <input type="text" placeholder="Ex: Praça Principal, Igreja, Escola" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Ponto de Referência</label>
+                    <input type="text" placeholder="Ex: Próximo ao Supermercado X">
+                </div>
+            </section>
+
+            <!-- Data e Horário -->
+            <section class="form-section">
+                <h2><i class="fas fa-calendar-alt"></i> Data e Horário</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Data de Início*</label>
+                        <input type="text" placeholder="dd/mm/aaaa" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Data de Término*</label>
+                        <input type="text" placeholder="dd/mm/aaaa" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Horário de Início*</label>
+                        <input type="text" placeholder="--:--" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Horário de Término*</label>
+                        <input type="text" placeholder="--:--" required>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Metas e Recursos -->
+            <section class="form-section">
+                <h2><i class="fas fa-bullseye"></i> Metas e Recursos</h2>
+                
+                <div class="form-group">
+                    <label>Meta de Doadores*</label>
+                    <input type="text" placeholder="Ex: 50" required>
+                    <span class="form-hint">Mínimo de 10 doadores por campanha</span>
+                </div>
+
+                <div class="form-group">
+                    <label>Recursos Necessários</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-item"><input type="checkbox"> Cadeiras</label>
+                        <label class="checkbox-item"><input type="checkbox"> Mesas</label>
+                        <label class="checkbox-item"><input type="checkbox"> Água</label>
+                        <label class="checkbox-item"><input type="checkbox"> Lanche</label>
+                        <label class="checkbox-item"><input type="checkbox"> Voluntários</label>
+                        <label class="checkbox-item"><input type="checkbox"> Sistema de Som</label>
+                        <label class="checkbox-item"><input type="checkbox"> Tendas</label>
+                        <label class="checkbox-item"><input type="checkbox"> Outros</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Recursos Adicionais Necessários</label>
+                    <textarea placeholder="Descreva outros recursos ou necessidades específicas"></textarea>
+                </div>
+            </section>
+
+            <!-- Mídia e Divulgação -->
+            <section class="form-section">
+                <h2><i class="fas fa-camera"></i> Mídia e Divulgação</h2>
+                
+                <div class="form-group">
+                    <label>Imagem da Campanha</label>
+                    <div class="upload-area">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Arraste uma imagem ou clique para selecionar</p>
+                        <span class="upload-hint">Formatos aceitos: JPG, PNG. Tamanho máximo: 5MB</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Canais de Divulgação</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-item"><input type="checkbox"> WhatsApp</label>
+                        <label class="checkbox-item"><input type="checkbox"> Instagram</label>
+                        <label class="checkbox-item"><input type="checkbox"> Facebook</label>
+                        <label class="checkbox-item"><input type="checkbox"> Cartazes</label>
+                        <label class="checkbox-item"><input type="checkbox"> Rádio Local</label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Termos e Condições -->
+            <section class="form-section terms-section">
+                <h2><i class="fas fa-file-contract"></i> Termos e Condições</h2>
+                
+                <div class="form-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" required>
+                        Concordo em seguir as diretrizes da HEMOBA e me comprometo a organizar a campanha de forma responsável
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" required>
+                        Concordo com a política de privacidade e o uso dos dados para fins de organização da campanha
+                    </label>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-check"></i> Criar Campanha
+                </button>
+                <button type="reset" class="btn-secondary">
+                    <i class="fas fa-redo"></i> Limpar Formulário
+                </button>
+            </div>
+        </form>
+
+        <!-- Histórias que Inspiram -->
+        <section class="success-stories">
+            <h2>Histórias que Inspiram</h2>
+            <p class="section-description">Conheça campanhas bem-sucedidas que estão fazendo a diferença em nossa cidade</p>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="images/campanha-tomba.jpg" alt="Campanha no Tomba">
+                    </div>
+                    <span class="story-tag">Destaque</span>
+                    <h3>Campanha no Tomba alcança 200% da meta</h3>
+                    <p>A união dos moradores resultou em 60 doações em um único dia, superando todas as expectativas e mostrando o poder da comunidade unida.</p>
+                    <div class="story-stats">
+                        <span><i class="fas fa-users"></i> 60 doadores</span>
+                        <span><i class="fas fa-calendar"></i> 1 dia</span>
+                        <span><i class="fas fa-heart"></i> 240 vidas impactadas</span>
+                    </div>
+                    <a href="#" class="story-link">Ver como fizeram <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-image">
+                        <img src="images/jovens-feira-vi.jpg" alt="Jovens do Feira VI">
+                    </div>
+                    <span class="story-tag">Comunidade</span>
+                    <h3>Jovens lideram campanha no Feira VI</h3>
+                    <p>Grupo de estudantes universitários mobilizou a comunidade através das redes sociais e conseguiu 45 doações em um final de semana.</p>
+                    <div class="story-stats">
+                        <span><i class="fas fa-users"></i> 45 doadores</span>
+                        <span><i class="fas fa-calendar"></i> 2 dias</span>
+                        <span><i class="fas fa-heart"></i> 180 vidas impactadas</span>
+                    </div>
+                    <a href="#" class="story-link">Ver como fizeram <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dicas para Sucesso -->
+        <section class="tips-section">
+            <h2>Dicas para uma Campanha de Sucesso</h2>
+            <ul class="tips-list">
+                <li><i class="fas fa-users"></i> Mobilize sua comunidade através de grupos de WhatsApp e redes sociais</li>
+                <li><i class="fas fa-bullhorn"></i> Divulgue a campanha em comércios locais e instituições do bairro</li>
+                <li><i class="fas fa-calendar-check"></i> Escolha datas e horários que facilitem a participação da maioria</li>
+                <li><i class="fas fa-heart"></i> Compartilhe histórias reais que mostrem a importância da doação</li>
+                <li><i class="fas fa-hands-helping"></i> Busque parcerias com estabelecimentos locais para apoio</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- isso aqui é o rodapé da página com links e contatos -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="hemobyte.html" class="footer-logo">
+                <i class="fas fa-tint"></i>
+                <span>HemoByte</span>
+            </a>
+            <nav class="footer-links">
+                <a href="campanhas-ativas.html">Campanhas</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="https://wa.me/75981829675"><i class="fab fa-whatsapp"></i></a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Character counter for description
+            const descricao = document.querySelector('textarea');
+            const charCounter = document.querySelector('.char-counter');
+            const maxLength = 500;
+
+            descricao.addEventListener('input', function() {
+                const remaining = maxLength - this.value.length;
+                charCounter.textContent = `${this.value.length}/${maxLength} caracteres`;
+                
+                if (this.value.length > maxLength) {
+                    this.value = this.value.substring(0, maxLength);
+                }
+            });
+
+            // File upload preview
+            const fileInput = document.querySelector('.upload-area input');
+            const filePreview = document.querySelector('.file-preview');
+
+            fileInput.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        filePreview.innerHTML = `
+                            <img src="${e.target.result}" alt="Preview" style="max-width: 200px; margin-bottom: 1rem;">
+                            <p>${file.name}</p>
+                        `;
+                    }
+                    reader.readAsDataURL(file);
+                } else {
+                    filePreview.innerHTML = `
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Arraste uma imagem ou clique para selecionar</p>
+                    `;
+                }
+            });
+
+            // Date validation
+            const dataInicio = document.querySelector('input[placeholder="dd/mm/aaaa"]');
+            const dataFim = document.querySelector('input[placeholder="dd/mm/aaaa"]');
+
+            dataInicio.addEventListener('change', function() {
+                dataFim.min = this.value;
+                if (dataFim.value && dataFim.value < this.value) {
+                    dataFim.value = this.value;
+                }
+            });
+
+            // Form validation
+            const form = document.querySelector('.campaign-form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic validation
+                const requiredFields = form.querySelectorAll('[required]');
+                let isValid = true;
+
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.classList.add('invalid');
+                    } else {
+                        field.classList.remove('invalid');
+                    }
+                });
+
+                if (!isValid) {
+                    alert('Por favor, preencha todos os campos obrigatórios.');
+                    return;
+                }
+
+                // Validate date range
+                const inicio = new Date(dataInicio.value);
+                const fim = new Date(dataFim.value);
+                if (fim < inicio) {
+                    alert('A data de término deve ser posterior à data de início.');
+                    return;
+                }
+
+                // Validate file size
+                const file = fileInput.files[0];
+                if (file && file.size > 5 * 1024 * 1024) { // 5MB
+                    alert('O tamanho máximo permitido para a imagem é 5MB.');
+                    return;
+                }
+
+                // If all validations pass, you can submit the form
+                alert('Formulário enviado com sucesso!');
+                // form.submit(); // Uncomment when backend is ready
+            });
+
+            // Drag and drop for file upload
+            const dropZone = document.querySelector('.upload-area');
+
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                dropZone.addEventListener(eventName, preventDefaults, false);
+            });
+
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            ['dragenter', 'dragover'].forEach(eventName => {
+                dropZone.addEventListener(eventName, highlight, false);
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                dropZone.addEventListener(eventName, unhighlight, false);
+            });
+
+            function highlight(e) {
+                dropZone.classList.add('highlight');
+            }
+
+            function unhighlight(e) {
+                dropZone.classList.remove('highlight');
+            }
+
+            dropZone.addEventListener('drop', handleDrop, false);
+
+            function handleDrop(e) {
+                const dt = e.dataTransfer;
+                const file = dt.files[0];
+
+                fileInput.files = dt.files;
+                const event = new Event('change');
+                fileInput.dispatchEvent(event);
+            }
+
+            // Phone number mask
+            const telefone = document.querySelector('input[placeholder="(75) XXXXX-XXXX"]');
+            telefone.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 11) value = value.slice(0, 11);
+                
+                if (value.length > 2) {
+                    value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+                }
+                if (value.length > 9) {
+                    value = `${value.slice(0, 9)}-${value.slice(9)}`;
+                }
+                
+                e.target.value = value;
+            });
+        });
+    </script>
+</body>
+</html> 

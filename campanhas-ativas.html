@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- isso aqui é o cabeçalho da página com meta informações e links para estilos -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campanhas Ativas - HemoByte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-fixed.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- isso aqui é o cabeçalho fixo do site com logo e menu de navegação -->
+    <header class="top-header">
+        <div class="logo-container">
+            <a href="hemobyte.html" class="logo-link">
+                <i class="fas fa-tint"></i>
+                <span class="logo-text">HemoByte</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="hemobyte.html" title="Início"><i class="fas fa-home"></i></a></li>
+                <li><a href="campanhas-ativas.html" class="active" title="Campanhas"><i class="fas fa-map-marker-alt"></i></a></li>
+                <li><a href="criar-campanha.html" title="Criar Campanha"><i class="fas fa-plus-circle"></i></a></li>
+                <li><a href="sobre.html" title="Sobre"><i class="fas fa-info-circle"></i></a></li>
+                <li><a href="login.html" title="Login"><i class="fas fa-user"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- isso aqui é o conteúdo principal da página -->
+    <main class="campanhas-page">
+        <h1>Campanhas Ativas em Feira de Santana</h1>
+        <p class="subtitle">Encontre e participe de campanhas de doação próximas a você</p>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" placeholder="Buscar campanhas..." class="search-input">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="filters-container">
+                <select class="filter-select">
+                    <option value="">Todos os Bairros</option>
+                    <option value="feira-vi">Feira VI</option>
+                    <option value="tomba">Tomba</option>
+                    <option value="centro">Centro</option>
+                    <option value="queimadinha">Queimadinha</option>
+                    <option value="cidade-nova">Cidade Nova</option>
+                    <option value="uefs">UEFS</option>
+                </select>
+
+                <select class="filter-select">
+                    <option value="">Todos os Status</option>
+                    <option value="urgente">Urgente</option>
+                    <option value="ativa">Ativa</option>
+                    <option value="planejamento">Planejamento</option>
+                </select>
+
+                <select class="filter-select">
+                    <option value="">Todas as Datas</option>
+                    <option value="hoje">Hoje</option>
+                    <option value="amanha">Amanhã</option>
+                    <option value="semana">Esta Semana</option>
+                    <option value="mes">Este Mês</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Campanhas Urgentes -->
+        <section class="campaigns-section">
+            <h2><i class="fas fa-exclamation-circle"></i> Campanhas Urgentes</h2>
+            <div class="campaigns-grid">
+                <div class="campaign-card">
+                    <div class="campaign-status urgent">Urgente</div>
+                    <h3>Campanha de Doação - Feira VI</h3>
+                    <div class="campaign-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Feira VI, Feira de Santana</p>
+                        <p><i class="fas fa-calendar"></i> 15 de Maio, 2024</p>
+                        <p><i class="fas fa-clock"></i> 08:00 - 17:00</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    <a href="login.html" class="participate-button">Participar</a>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-status urgent">Urgente</div>
+                    <h3>Doação Emergencial - Centro</h3>
+                    <div class="campaign-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Centro, Feira de Santana</p>
+                        <p><i class="fas fa-calendar"></i> 16 de Maio, 2024</p>
+                        <p><i class="fas fa-clock"></i> 09:00 - 16:00</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 30%"></div>
+                        </div>
+                    </div>
+                    <a href="login.html" class="participate-button">Participar</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campanhas Ativas -->
+        <section class="campaigns-section">
+            <h2><i class="fas fa-check-circle"></i> Campanhas Ativas</h2>
+            <div class="campaigns-grid">
+                <div class="campaign-card">
+                    <div class="campaign-status active">Ativa</div>
+                    <h3>Doe Vida - Tomba</h3>
+                    <div class="campaign-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Tomba, Feira de Santana</p>
+                        <p><i class="fas fa-calendar"></i> 20 de Maio, 2024</p>
+                        <p><i class="fas fa-clock"></i> 09:00 - 16:00</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <a href="login.html" class="participate-button">Participar</a>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-status active">Ativa</div>
+                    <h3>Campanha Universitária - UEFS</h3>
+                    <div class="campaign-info">
+                        <p><i class="fas fa-map-marker-alt"></i> UEFS, Feira de Santana</p>
+                        <p><i class="fas fa-calendar"></i> 22 de Maio, 2024</p>
+                        <p><i class="fas fa-clock"></i> 08:00 - 17:00</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <a href="login.html" class="participate-button">Participar</a>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-status active">Ativa</div>
+                    <h3>Campanha Solidária - Queimadinha</h3>
+                    <div class="campaign-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Queimadinha, Feira de Santana</p>
+                        <p><i class="fas fa-calendar"></i> 25 de Maio, 2024</p>
+                        <p><i class="fas fa-clock"></i> 08:00 - 15:00</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    <a href="login.html" class="participate-button">Participar</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Próximas Campanhas -->
+        <section class="campaigns-section">
+            <h2><i class="fas fa-calendar-alt"></i> Próximas Campanhas</h2>
+            <div class="campaigns-grid">
+                <div class="campaign-card">
+                    <div class="campaign-status planning">Planejamento</div>
+                    <h3>Unidos pelo Sangue - Serraria Brasil</h3>
+                    <div class="campaign-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Serraria Brasil, Feira de Santana</p>
+                        <p><i class="fas fa-calendar"></i> 1-2 de Junho, 2024</p>
+                        <p><i class="fas fa-clock"></i> 08:00 - 16:00</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 10%"></div>
+                        </div>
+                    </div>
+                    <a href="login.html" class="participate-button">Participar</a>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-status planning">Planejamento</div>
+                    <h3>Campanha Comunitária - Cidade Nova</h3>
+                    <div class="campaign-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Cidade Nova, Feira de Santana</p>
+                        <p><i class="fas fa-calendar"></i> 5 de Junho, 2024</p>
+                        <p><i class="fas fa-clock"></i> 09:00 - 17:00</p>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 5%"></div>
+                        </div>
+                    </div>
+                    <a href="login.html" class="participate-button">Participar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- isso aqui é o rodapé da página com links e contatos -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="hemobyte.html" class="footer-logo">
+                <i class="fas fa-tint"></i>
+                <span>HemoByte</span>
+            </a>
+            <nav class="footer-links">
+                <a href="campanhas-ativas.html">Campanhas</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="https://wa.me/75981829675"><i class="fab fa-whatsapp"></i></a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html> 

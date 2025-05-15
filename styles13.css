@@ -1,0 +1,899 @@
+/* ==========================================
+   VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
+   ========================================== */
+:root {
+    /* isso aqui são as cores principais do site */
+    --primary-color: #e60000;      /* vermelho principal */
+    --secondary-color: #333;       /* cinza escuro para textos */
+    --background-color: #f5f5f5;   /* cinza claro para fundos */
+    --text-color: #333;           /* cor padrão para textos */
+    --border-color: #ddd;         /* cor para bordas */
+    --success-color: #28a745;     /* verde para sucessos */
+    --warning-color: #ffc107;     /* amarelo para avisos */
+    --danger-color: #dc3545;      /* vermelho para erros */
+    --accent-color: #FFD100;      /* amarelo para destaques */
+    --transition-speed: 0.3s;     /* velocidade padrão das animações */
+}
+
+/* ==========================================
+   ANIMAÇÕES
+   ========================================== */
+/* isso aqui é a animação de fade in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* isso aqui é a animação de escala */
+@keyframes scaleIn {
+    from { transform: scale(0.95); }
+    to { transform: scale(1); }
+}
+
+/* isso aqui é a animação de slide */
+@keyframes slideIn {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* isso aqui é a animação de spray (efeito grafite) */
+@keyframes sprayIn {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: scale(1.2);
+        text-shadow: 0 0 0 rgba(255,255,255,0);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+}
+
+/* isso aqui é a animação de pulse */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* ==========================================
+   ESTILOS BASE
+   ========================================== */
+/* isso aqui é o reset básico e configurações gerais */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+<<<<<<< Updated upstream
+h2 {
+  font-size: 36px;
+  color: #9c0815da;
+  text-align: center;
+  margin: 40px 0 20px;
+=======
+/* ==========================================
+   CABEÇALHO
+   ========================================== */
+/* isso aqui é o estilo do cabeçalho fixo */
+.top-header {
+    background: white;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+>>>>>>> Stashed changes
+}
+
+/* isso aqui é o container do logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+<<<<<<< Updated upstream
+
+
+
+header {
+  background-color: #960713;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 40px;
+  flex-wrap: wrap;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: white;
+
+=======
+/* isso aqui é o link do logo */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform var(--transition-speed);
+>>>>>>> Stashed changes
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+}
+
+<<<<<<< Updated upstream
+
+.top-bar{
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+  position: relative;
+  right: 260px;
+  top: 30px;
+  left: 75px;
+=======
+.logo-text {
+    font-weight: 700;
+>>>>>>> Stashed changes
+}
+
+/* ==========================================
+   NAVEGAÇÃO
+   ========================================== */
+/* isso aqui é o menu de navegação principal */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* isso aqui são os links do menu */
+.main-nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all var(--transition-speed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.main-nav a:hover {
+    background-color: #f5f5f5;
+    color: var(--primary-color);
+}
+
+<<<<<<< Updated upstream
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  flex-wrap: wrap;
+  position: relative;
+  right: 250px;
+
+=======
+.main-nav a.active {
+    color: var(--primary-color);
+>>>>>>> Stashed changes
+}
+
+/* ==========================================
+   HERO BANNER
+   ========================================== */
+.hero-banner {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+<<<<<<< Updated upstream
+#navbar li a.active,
+#navbar li a:hover {
+color: grey;
+}
+
+.socials a {
+  margin-left: 10px;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+  position: relative;
+  left: 270px;
+
+}
+
+.socials a:hover{
+  color: grey;
+=======
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+/* Feature Cards */
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+>>>>>>> Stashed changes
+}
+
+.feature-icon-container {
+    background: #ffebeb;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.feature-icon-container i {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* App Buttons */
+.app-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.app-button {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: #333;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform var(--transition-speed);
+}
+
+.app-button:hover {
+    transform: translateY(-2px);
+}
+
+.app-button i {
+    font-size: 2rem;
+}
+
+<<<<<<< Updated upstream
+.carousel img {
+  width: 45%;
+  height: auto;
+  margin-bottom: 10px;
+=======
+.button-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+>>>>>>> Stashed changes
+}
+
+.button-text span {
+    font-size: 0.7rem;
+}
+
+.button-text strong {
+    font-size: 1.1rem;
+}
+
+/* ==========================================
+   STATS BANNER
+   ========================================== */
+.stats-banner {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.stat-item .stat-label {
+    font-size: 1rem;
+}
+
+.banner-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition-speed);
+}
+
+.cta-button.primary {
+    background-color: var(--accent-color);
+    color: #333;
+}
+
+.cta-button.secondary {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   EMERGENCY ALERT
+   ========================================== */
+.emergency-alert {
+    background-color: white;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.alert-icon {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    animation: pulse 2s infinite;
+}
+
+.alert-text h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.alert-button {
+    margin-left: auto;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition-speed);
+}
+
+.alert-button:hover {
+    background-color: #cc0000;
+}
+
+/* ==========================================
+   IMPACT SECTION
+   ========================================== */
+.impact-section {
+    padding: 4rem 2rem;
+    background-color: var(--background-color);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.impact-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.impact-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    width: 250px;
+    text-align: center;
+}
+
+.impact-icon {
+    margin-bottom: 1.5rem;
+}
+
+.impact-icon i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.impact-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.impact-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.impact-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   CAMPAIGNS SECTION
+   ========================================== */
+.campaigns-section {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.view-all {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.campaigns-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.campaign-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 2rem;
+    width: 100%;
+    position: relative;
+    border-left: 4px solid #ffd100;
+}
+
+.campaign-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.campaign-status.urgent {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.campaign-status.active {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.campaign-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.campaign-details {
+    margin-bottom: 1.5rem;
+}
+
+.campaign-details p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.campaign-details i {
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.campaign-progress {
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.campaign-button {
+    display: block;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition-speed);
+}
+
+.campaign-button:hover {
+    background-color: #cc0000;
+}
+
+/* ==========================================
+   HOW IT WORKS SECTION
+   ========================================== */
+.how-it-works {
+    padding: 4rem 2rem;
+    background-color: var(--background-color);
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+
+.step-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    width: 250px;
+    text-align: center;
+}
+
+.step-icon {
+    background-color: #ffebeb;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.step-icon i {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.step-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.step-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.app-promo-button {
+    text-align: center;
+}
+
+.app-promo-button .app-button {
+    display: inline-flex;
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    background-color: rgba(230, 0, 0, 0.1);
+    color: var(--primary-color);
+}
+
+.app-promo-button .app-button i {
+    font-size: 1.2rem;
+}
+
+/* ==========================================
+   APP PROMO SECTION
+   ========================================== */
+.app-promo {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.app-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.app-content h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.app-content > p {
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.app-features {
+    display: flex;
+    justify-content: space-around;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+
+.feature-icon {
+    background-color: #ffebeb;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.feature-icon i {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.feature-text h4 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.feature-text p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+<<<<<<< Updated upstream
+
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  position: relative;
+  right: 300px;
+=======
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+>>>>>>> Stashed changes
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.footer-bottom p {
+  color: white;
+  font-size: 16px;
+  position: relative;
+  left: 320px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.divider {
+    color: #ddd;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+   ========================================== */
+@media (max-width: 1024px) {
+    .feature-cards,
+    .steps-container,
+    .app-features {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    
+    .banner-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .campaigns-container {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .emergency-alert {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    
+    .alert-button {
+        margin: 0;
+    }
+    
+    .feature-card,
+    .impact-card,
+    .step-card {
+        width: 100%;
+    }
+    
+    .app-buttons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+<<<<<<< Updated upstream
+
+.form-group input[type="file"] {
+  padding: 6px;
+}
+
+.btn-enviar {
+  background-color: #D32F2F;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: block;
+  margin: 20px auto 0;
+}
+
+.btn-enviar:hover {
+  background-color: #B71C1C;
+}
+
+.logo{
+  position: relative;
+  height: 70px;
+  width: 70px;
+  position: relative;
+  bottom: 10px;
+
+=======
+>>>>>>> Stashed changes
+}

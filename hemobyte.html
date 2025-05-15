@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- isso aqui é o cabeçalho da página com meta informações e links para estilos -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HemoByte - Campanhas de Doação de Sangue em Feira de Santana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-fixed.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- isso aqui é o cabeçalho fixo do site com logo e menu de navegação -->
+  <header class="top-header">
+    <div class="logo-container">
+      <a href="hemobyte.html" class="logo-link">
+        <i class="fas fa-tint"></i>
+        <span class="logo-text">HemoByte</span>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="hemobyte.html" class="active" title="Início"><i class="fas fa-home"></i></a></li>
+        <li><a href="campanhas-ativas.html" title="Campanhas"><i class="fas fa-map-marker-alt"></i></a></li>
+        <li><a href="criar-campanha.html" title="Criar Campanha"><i class="fas fa-plus-circle"></i></a></li>
+        <li><a href="sobre.html" title="Sobre"><i class="fas fa-info-circle"></i></a></li>
+        <li><a href="login.html" title="Login"><i class="fas fa-user"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Stats Banner -->
+  <section class="stats-banner">
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-number">1.500+</div>
+        <div class="stat-label">DOAÇÕES</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">12</div>
+        <div class="stat-label">CAMPANHAS</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">6.000+</div>
+        <div class="stat-label">VIDAS IMPACTADAS</div>
+      </div>
+    
+      <div class="banner-buttons">
+        <a href="criar-campanha.html" class="cta-button primary">Criar Campanha</a>
+        <a href="campanhas-ativas.html" class="cta-button secondary">Ver Campanhas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- isso aqui é o banner principal da página -->
+  <section class="hero-banner">
+  </section>
+
+  <!-- isso aqui é a seção de estatísticas de impacto -->
+  <section class="impact-section">
+    <!-- Emergency Alert -->
+    <section class="emergency-alert">
+      <i class="fas fa-exclamation-circle alert-icon"></i>
+      <div class="alert-text">
+        <h3>Urgente: Tipo O- em Baixa</h3>
+      </div>
+      <a href="campanhas-ativas.html" class="alert-button">Doar Agora</a>
+    </section>
+
+    <h2 class="section-title">Nosso Impacto em Feira de Santana</h2>
+    
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="impact-icon">
+          <i class="fas fa-tint"></i>
+        </div>
+        <h3>Doações Realizadas</h3>
+        <div class="impact-number">1.500+</div>
+        <p>este mês</p>
+      </div>
+      
+      <div class="impact-card">
+        <div class="impact-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3>Campanhas Ativas</h3>
+        <div class="impact-number">12</div>
+        <p>em diferentes bairros</p>
+      </div>
+      
+      <div class="impact-card">
+        <div class="impact-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Vidas Impactadas</h3>
+        <div class="impact-number">6.000+</div>
+        <p>em 2024</p>
+      </div>
+      
+      <div class="impact-card">
+        <div class="impact-icon">
+          <i class="fas fa-hospital"></i>
+        </div>
+        <h3>Hospitais Atendidos</h3>
+        <div class="impact-number">15</div>
+        <p>na região</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- isso aqui é a seção de campanhas em destaque -->
+  <section class="campaigns-section">
+    <div class="section-header">
+      <h2>Campanhas em Destaque</h2>
+      <a href="campanhas-ativas.html" class="view-all">Ver Todas</a>
+    </div>
+    
+    <div class="campaigns-container">
+      <div class="campaign-card">
+        <div class="campaign-status urgent">Urgente</div>
+        <h3>Campanha Solidária - Feira VI</h3>
+        <div class="campaign-details">
+          <p><i class="fas fa-map-marker-alt"></i> Feira VI</p>
+          <p><i class="fas fa-calendar"></i> 25-26 Março</p>
+          <p><i class="fas fa-users"></i> Meta: 50 doadores</p>
+        </div>
+        <div class="campaign-progress">
+          <div class="progress-bar">
+            <div class="progress" style="width: 60%"></div>
+          </div>
+        </div>
+        <a href="login.html" class="campaign-button">Participar</a>
+      </div>
+      
+      <div class="campaign-card">
+        <div class="campaign-status active">Ativa</div>
+        <h3>Doe Vida - Tomba</h3>
+        <div class="campaign-details">
+          <p><i class="fas fa-map-marker-alt"></i> Tomba</p>
+          <p><i class="fas fa-calendar"></i> 27-28 Março</p>
+          <p><i class="fas fa-users"></i> Meta: 30 doadores</p>
+        </div>
+        <div class="campaign-progress">
+          <div class="progress-bar">
+            <div class="progress" style="width: 40%"></div>
+          </div>
+        </div>
+        <a href="login.html" class="campaign-button">Participar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- isso aqui é a seção de histórias de sucesso -->
+  <section class="success-stories">
+  </section>
+
+  <!-- isso aqui é a seção de promoção do aplicativo -->
+  <section class="app-promo">
+    <div class="app-content">
+      <h2>App HemoByte</h2>
+      <p>Transforme vidas com apenas alguns toques</p>
+      
+      <div class="app-features">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+          <div class="feature-text">
+            <h4>Notificações</h4>
+            <p>Alertas de campanhas próximas</p>
+          </div>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <div class="feature-text">
+            <h4>Localização</h4>
+            <p>Encontre pontos de doação</p>
+          </div>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <div class="feature-text">
+            <h4>Agendamento</h4>
+            <p>Marque sua doação facilmente</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- App Download Buttons -->
+      <div class="app-buttons-container">
+        <a href="#" class="app-button google-play">
+          <i class="fab fa-google-play"></i>
+          <div class="button-text">
+            <span>BAIXE NO</span>
+            <strong>Google Play</strong>
+          </div>
+        </a>
+        <a href="#" class="app-button app-store">
+          <i class="fab fa-apple"></i>
+          <div class="button-text">
+            <span>DISPONÍVEL NA</span>
+            <strong>App Store</strong>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- isso aqui é o rodapé da página com links e contatos -->
+  <footer class="footer">
+    <div class="footer-content">
+      <a href="hemobyte.html" class="footer-logo">
+        <i class="fas fa-tint"></i>
+        <span>HemoByte</span>
+      </a>
+      <nav class="footer-links">
+        <a href="campanhas-ativas.html">Campanhas</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="https://wa.me/75981829675"><i class="fab fa-whatsapp"></i></a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
