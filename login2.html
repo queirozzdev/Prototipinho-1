@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<!-- isso aqui é o cabeçalho da página com meta informações e links para estilos -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +8,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles13.css">
+    <link rel="stylesheet" href="styles-fixed.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- isso aqui é o cabeçalho fixo do site com logo e menu de navegação -->
     <header class="top-header">
         <div class="logo-container">
-            <a href="hemobyteee.html" class="logo-link">
+            <a href="hemobyte.html" class="logo-link">
                 <i class="fas fa-tint"></i>
                 <span class="logo-text">HemoByte</span>
             </a>
         </div>
         <nav class="main-nav">
             <ul>
-                <li><a href="hemobyteee.html" title="Início"><i class="fas fa-home"></i></a></li>
+                <li><a href="hemobyte.html" title="Início"><i class="fas fa-home"></i></a></li>
                 <li><a href="campanhas-ativas.html" title="Campanhas"><i class="fas fa-map-marker-alt"></i></a></li>
                 <li><a href="criar-campanha.html" title="Criar Campanha"><i class="fas fa-plus-circle"></i></a></li>
                 <li><a href="sobre.html" title="Sobre"><i class="fas fa-info-circle"></i></a></li>
+                <li><a href="login.html" class="active" title="Login"><i class="fas fa-user"></i></a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- isso aqui é o conteúdo principal da página -->
     <main class="login-page">
+        <!-- isso aqui é o container de autenticação -->
         <div class="auth-container">
             <div class="auth-card">
+                <!-- isso aqui são as abas de login e cadastro -->
                 <div class="auth-tabs">
-                    <button class="tab-link active" data-tab="login">
+                    <a href="#login" class="tab-link active">
                         <i class="fas fa-sign-in-alt"></i> Login
-                    </button>
-                    <button class="tab-link" data-tab="cadastro">
+                    </a>
+                    <a href="#cadastro" class="tab-link">
                         <i class="fas fa-user-plus"></i> Cadastrar
-                    </button>
+                    </a>
                 </div>
 
+                <!-- isso aqui é o formulário de login -->
                 <form id="login-form" class="auth-form active">
                     <div class="form-group">
                         <label><i class="fas fa-envelope"></i> Email</label>
@@ -64,6 +71,7 @@
                     </button>
                 </form>
 
+                <!-- isso aqui é o formulário de cadastro -->
                 <form id="cadastro-form" class="auth-form">
                     <div class="form-group">
                         <label><i class="fas fa-user"></i> Nome Completo</label>
@@ -96,15 +104,17 @@
                 </form>
             </div>
 
+            <!-- isso aqui são os links de ajuda -->
             <div class="auth-links">
                 <p>Precisa de ajuda? <a href="https://wa.me/75981829675" target="_blank"><i class="fab fa-whatsapp"></i> Fale Conosco</a></p>
             </div>
         </div>
     </main>
 
+    <!-- isso aqui é o rodapé da página com links e contatos -->
     <footer class="footer">
         <div class="footer-content">
-            <a href="hemobyteee.html" class="footer-logo">
+            <a href="hemobyte.html" class="footer-logo">
                 <i class="fas fa-tint"></i>
                 <span>HemoByte</span>
             </a>
@@ -123,7 +133,9 @@
         const forms = document.querySelectorAll('.auth-form');
 
         tabLinks.forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
                 // Remove a classe active de todos os links e forms
                 tabLinks.forEach(l => l.classList.remove('active'));
                 forms.forEach(f => f.classList.remove('active'));
@@ -132,8 +144,8 @@
                 link.classList.add('active');
                 
                 // Mostra o formulário correspondente
-                const formId = link.getAttribute('data-tab') + '-form';
-                document.getElementById(formId).classList.add('active');
+                const formId = link.getAttribute('href').replace('#', '');
+                document.getElementById(formId + '-form').classList.add('active');
             });
         });
 

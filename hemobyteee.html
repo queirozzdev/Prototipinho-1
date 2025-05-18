@@ -15,18 +15,24 @@
   <!-- isso aqui é o cabeçalho fixo do site com logo e menu de navegação -->
   <header class="top-header">
     <div class="logo-container">
-      <a href="hemobyte.html" class="logo-link">
+      <a href="hemobyteee.html" class="logo-link">
         <i class="fas fa-tint"></i>
         <span class="logo-text">HemoByte</span>
       </a>
     </div>
     <nav class="main-nav">
       <ul>
-        <li><a href="hemobyte.html" class="active" title="Início"><i class="fas fa-home"></i></a></li>
+        <li><a href="hemobyteee.html" class="active" title="Início"><i class="fas fa-home"></i></a></li>
         <li><a href="campanhas-ativas.html" title="Campanhas"><i class="fas fa-map-marker-alt"></i></a></li>
         <li><a href="criar-campanha.html" title="Criar Campanha"><i class="fas fa-plus-circle"></i></a></li>
         <li><a href="sobre.html" title="Sobre"><i class="fas fa-info-circle"></i></a></li>
-        <li><a href="login.html" title="Login"><i class="fas fa-user"></i></a></li>
+        <li id="nav-login"><a href="login.html" title="Login"><i class="fas fa-user"></i></a></li>
+        <li id="nav-profile" style="display: none;">
+          <a href="public/perfil.html" title="Perfil" class="profile-link">
+            <i class="fas fa-user-circle"></i>
+            <span class="user-name">Carregando...</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -228,5 +234,28 @@
       </nav>
     </div>
   </footer>
+
+  <script src="public/login.js"></script>
+  <script>
+    // Função para atualizar a navegação baseada no status de login
+    function atualizarNavegacao() {
+      const usuario = JSON.parse(localStorage.getItem('usuario'));
+      const navLogin = document.getElementById('nav-login');
+      const navProfile = document.getElementById('nav-profile');
+      const userName = document.querySelector('.user-name');
+
+      if (usuario && navLogin && navProfile && userName) {
+        navLogin.style.display = 'none';
+        navProfile.style.display = 'block';
+        userName.textContent = usuario.nome.split(' ')[0]; // Mostra apenas o primeiro nome
+      } else {
+        navLogin.style.display = 'block';
+        navProfile.style.display = 'none';
+      }
+    }
+
+    // Atualiza a navegação quando a página carregar
+    document.addEventListener('DOMContentLoaded', atualizarNavegacao);
+  </script>
 </body>
 </html>

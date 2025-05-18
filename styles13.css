@@ -80,128 +80,156 @@ body {
     background-color: var(--background-color);
 }
 
-<<<<<<< Updated upstream
-h2 {
-  font-size: 36px;
-  color: #9c0815da;
-  text-align: center;
-  margin: 40px 0 20px;
-=======
+/* ==========================================
+   NAVEGAÇÃO
+   ========================================== */
+nav {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+}
+
+/* Ícone de perfil */
+#nav-profile a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#nav-profile i {
+    font-size: 1.5rem;
+    color: #e74c3c;
+}
+
+.user-name {
+    font-weight: 500;
+}
+
+/* Logo */
+.logo h1 {
+    color: #e74c3c;
+    font-size: 1.8rem;
+}
+
 /* ==========================================
    CABEÇALHO
    ========================================== */
-/* isso aqui é o estilo do cabeçalho fixo */
 .top-header {
-    background: white;
-    padding: 0.5rem 1rem;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(230, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
->>>>>>> Stashed changes
 }
 
-/* isso aqui é o container do logo */
 .logo-container {
     display: flex;
     align-items: center;
 }
 
-<<<<<<< Updated upstream
-
-
-
-header {
-  background-color: #960713;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 10px 40px;
-  flex-wrap: wrap;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  color: white;
-
-=======
-/* isso aqui é o link do logo */
 .logo-link {
+    text-decoration: none;
+    color: #e60000;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--primary-color);
     font-size: 1.5rem;
-    text-decoration: none;
-    transition: transform var(--transition-speed);
->>>>>>> Stashed changes
+    font-weight: 600;
 }
 
-.logo-link:hover {
-    transform: scale(1.05);
-}
-
-<<<<<<< Updated upstream
-
-.top-bar{
-  display: flex;
-  gap: 15px;
-  margin-bottom: 10px;
-  position: relative;
-  right: 260px;
-  top: 30px;
-  left: 75px;
-=======
 .logo-text {
-    font-weight: 700;
->>>>>>> Stashed changes
+    color: #e60000;
 }
 
-/* ==========================================
-   NAVEGAÇÃO
-   ========================================== */
-/* isso aqui é o menu de navegação principal */
 .main-nav ul {
-    list-style: none;
     display: flex;
-    gap: 1.5rem;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
-/* isso aqui são os links do menu */
 .main-nav a {
-    color: var(--secondary-color);
     text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    border-radius: 50%;
-    transition: all var(--transition-speed);
+    color: #e60000;
+    font-weight: 500;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
 }
 
 .main-nav a:hover {
-    background-color: #f5f5f5;
-    color: var(--primary-color);
+    color: #cc0000;
+    transform: translateY(-2px);
 }
 
-<<<<<<< Updated upstream
-#navbar {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 30px;
-  list-style: none;
-  flex-wrap: wrap;
-  position: relative;
-  right: 250px;
+.main-nav i {
+    font-size: 1.2rem;
+}
 
-=======
-.main-nav a.active {
-    color: var(--primary-color);
->>>>>>> Stashed changes
+/* Ajuste para a página de login */
+.login-page .top-header {
+    background: #fff;
+    border-bottom: 2px solid #e60000;
+}
+
+.login-page .main-nav a {
+    color: #e60000;
+}
+
+.login-page .main-nav a:hover {
+    color: #cc0000;
+}
+
+.login-page .logo-link {
+    color: #e60000;
+}
+
+.login-page .logo-text {
+    color: #e60000;
+}
+
+/* Responsividade do header */
+@media (max-width: 768px) {
+    .top-header {
+        padding: 1rem;
+    }
+
+    .main-nav ul {
+        gap: 1rem;
+    }
+
+    .main-nav a {
+        font-size: 0.9rem;
+    }
+
+    .logo-link {
+        font-size: 1.2rem;
+    }
 }
 
 /* ==========================================
@@ -213,25 +241,6 @@ header {
     background-color: #f8f9fa;
 }
 
-<<<<<<< Updated upstream
-#navbar li a.active,
-#navbar li a:hover {
-color: grey;
-}
-
-.socials a {
-  margin-left: 10px;
-  color: white;
-  font-size: 18px;
-  transition: color 0.3s;
-  position: relative;
-  left: 270px;
-
-}
-
-.socials a:hover{
-  color: grey;
-=======
 .subtitle {
     font-size: 1.5rem;
     color: var(--secondary-color);
@@ -254,7 +263,6 @@ color: grey;
     width: 250px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     text-align: center;
->>>>>>> Stashed changes
 }
 
 .feature-icon-container {
@@ -311,17 +319,10 @@ color: grey;
     font-size: 2rem;
 }
 
-<<<<<<< Updated upstream
-.carousel img {
-  width: 45%;
-  height: auto;
-  margin-bottom: 10px;
-=======
 .button-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
->>>>>>> Stashed changes
 }
 
 .button-text span {
@@ -748,9 +749,11 @@ color: grey;
    FOOTER
    ========================================== */
 .footer {
-    background-color: #f8f9fa;
+    background-color: #fff;
+    color: #e60000;
     padding: 2rem;
-    border-top: 1px solid #eee;
+    margin-top: auto;
+    border-top: 2px solid #e60000;
 }
 
 .footer-content {
@@ -761,52 +764,250 @@ color: grey;
     align-items: center;
 }
 
-<<<<<<< Updated upstream
-
-
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-  position: relative;
-  right: 300px;
-=======
 .footer-logo {
+    text-decoration: none;
+    color: #e60000;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--primary-color);
-    text-decoration: none;
     font-size: 1.5rem;
     font-weight: 600;
->>>>>>> Stashed changes
+    transition: all 0.3s ease;
+}
+
+.footer-logo:hover {
+    color: #cc0000;
+    transform: translateY(-2px);
 }
 
 .footer-links {
     display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-.footer-bottom p {
-  color: white;
-  font-size: 16px;
-  position: relative;
-  left: 320px;
+    gap: 2rem;
 }
 
 .footer-links a {
-    color: #666;
+    color: #e60000;
     text-decoration: none;
-    transition: color var(--transition-speed);
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .footer-links a:hover {
-    color: var(--primary-color);
+    color: #cc0000;
+    transform: translateY(-2px);
 }
 
-.divider {
-    color: #ddd;
+.footer-links i {
+    font-size: 1.2rem;
+}
+
+/* Responsividade do footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
+/* ==========================================
+   FORMULÁRIOS
+   ========================================== */
+.form-group input[type="file"] {
+    padding: 6px;
+}
+
+.btn-enviar {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background var(--transition-speed);
+    display: block;
+    margin: 20px auto 0;
+}
+
+.btn-enviar:hover {
+    background-color: #B71C1C;
+}
+
+/* ==========================================
+   PÁGINA DE LOGIN
+   ========================================== */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 2rem;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(230, 0, 0, 0.1);
+    border: 2px solid #e60000;
+    padding: 2rem;
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e60000;
+}
+
+.tab-link {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    background: none;
+    border: none;
+    color: #e60000;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-link.active {
+    background: #e60000;
+    color: #fff;
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: #e60000;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e60000;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(230, 0, 0, 0.1);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e60000;
+}
+
+.forgot-password {
+    color: #e60000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.btn-auth {
+    width: 100%;
+    padding: 1rem;
+    background: #e60000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-auth:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+}
+
+.auth-links {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #e60000;
+}
+
+.auth-links a {
+    color: #e60000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 1.5rem;
+    }
+
+    .tab-link {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .form-group input {
+        padding: 0.7rem;
+    }
+
+    .btn-auth {
+        padding: 0.8rem;
+    }
 }
 
 /* ==========================================
@@ -817,6 +1018,11 @@ color: grey;
     .steps-container,
     .app-features {
         flex-wrap: wrap;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 }
 
@@ -835,10 +1041,27 @@ color: grey;
         flex-direction: column;
     }
     
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .top-header {
+        padding: 1rem;
+    }
+
+    .auth-card {
+        padding: 1.5rem;
+    }
+
     .footer-content {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
         text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
     }
 }
 
@@ -863,37 +1086,20 @@ color: grey;
         flex-direction: column;
         align-items: center;
     }
-}
-<<<<<<< Updated upstream
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.form-group input[type="file"] {
-  padding: 6px;
-}
+    .auth-tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 
-.btn-enviar {
-  background-color: #D32F2F;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-  display: block;
-  margin: 20px auto 0;
-}
-
-.btn-enviar:hover {
-  background-color: #B71C1C;
-}
-
-.logo{
-  position: relative;
-  height: 70px;
-  width: 70px;
-  position: relative;
-  bottom: 10px;
-
-=======
->>>>>>> Stashed changes
+    .form-options {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
 }
