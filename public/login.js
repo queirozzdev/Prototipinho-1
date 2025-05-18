@@ -12,11 +12,11 @@ const usuarios = [
     },
     {
         id: 2,
-        nome: "Maria Santos",
-        email: "maria@email.com",
+        nome: "Davi Santss",
+        email: "Davi@hotmail.com",
         senha: "123456",
-        dataNascimento: "20/08/1985",
-        telefone: "(11) 91234-5678",
+        dataNascimento: "20/08/2004",
+        telefone: "(75) 91234-5678",
         endereco: "Av. Paulista, 1000 - São Paulo, SP",
         tipoSanguineo: "A+"
     }
