@@ -18,7 +18,7 @@ const usuarios = [
         dataNascimento: "20/08/2004",
         telefone: "(75) 91234-5678",
         endereco: "Av. Paulista, 1000 - São Paulo, SP",
-        tipoSanguineo: "A+"
+        tipoSanguineo: "O-"
     }
 ];
 
