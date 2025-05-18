@@ -43,7 +43,7 @@
             </div>
             
             <div class="filters-container">
-                <select class="filter-select">
+                <select class="filter-select" id="bairro-filter">
                     <option value="">Todos os Bairros</option>
                     <option value="feira-vi">Feira VI</option>
                     <option value="tomba">Tomba</option>
@@ -53,14 +53,26 @@
                     <option value="uefs">UEFS</option>
                 </select>
 
-                <select class="filter-select">
-                    <option value="">Todos os Status</option>
-                    <option value="urgente">Urgente</option>
-                    <option value="ativa">Ativa</option>
-                    <option value="planejamento">Planejamento</option>
+                <select class="filter-select" id="tipo-sanguineo-filter">
+                    <option value="">Todos os Tipos Sanguíneos</option>
+                    <option value="a+">A+</option>
+                    <option value="a-">A-</option>
+                    <option value="b+">B+</option>
+                    <option value="b-">B-</option>
+                    <option value="ab+">AB+</option>
+                    <option value="ab-">AB-</option>
+                    <option value="o+">O+</option>
+                    <option value="o-">O-</option>
                 </select>
 
-                <select class="filter-select">
+                <select class="filter-select" id="status-filter">
+                    <option value="">Todos os Status</option>
+                    <option value="urgent">Urgente</option>
+                    <option value="active">Ativa</option>
+                    <option value="planning">Planejamento</option>
+                </select>
+
+                <select class="filter-select" id="data-filter">
                     <option value="">Todas as Datas</option>
                     <option value="hoje">Hoje</option>
                     <option value="amanha">Amanhã</option>
@@ -81,6 +93,7 @@
                         <p><i class="fas fa-map-marker-alt"></i> Feira VI, Feira de Santana</p>
                         <p><i class="fas fa-calendar"></i> 15 de Maio, 2024</p>
                         <p><i class="fas fa-clock"></i> 08:00 - 17:00</p>
+                        <p><i class="fas fa-tint"></i> Tipo Sanguíneo: A+</p>
                     </div>
                     <div class="progress-container">
                         <div class="progress-bar">
@@ -97,6 +110,7 @@
                         <p><i class="fas fa-map-marker-alt"></i> Centro, Feira de Santana</p>
                         <p><i class="fas fa-calendar"></i> 16 de Maio, 2024</p>
                         <p><i class="fas fa-clock"></i> 09:00 - 16:00</p>
+                        <p><i class="fas fa-tint"></i> Tipo Sanguíneo: O-</p>
                     </div>
                     <div class="progress-container">
                         <div class="progress-bar">
@@ -119,6 +133,7 @@
                         <p><i class="fas fa-map-marker-alt"></i> Tomba, Feira de Santana</p>
                         <p><i class="fas fa-calendar"></i> 20 de Maio, 2024</p>
                         <p><i class="fas fa-clock"></i> 09:00 - 16:00</p>
+                        <p><i class="fas fa-tint"></i> Tipo Sanguíneo: B+</p>
                     </div>
                     <div class="progress-container">
                         <div class="progress-bar">
@@ -135,6 +150,7 @@
                         <p><i class="fas fa-map-marker-alt"></i> UEFS, Feira de Santana</p>
                         <p><i class="fas fa-calendar"></i> 22 de Maio, 2024</p>
                         <p><i class="fas fa-clock"></i> 08:00 - 17:00</p>
+                        <p><i class="fas fa-tint"></i> Tipo Sanguíneo: AB+</p>
                     </div>
                     <div class="progress-container">
                         <div class="progress-bar">
@@ -151,6 +167,7 @@
                         <p><i class="fas fa-map-marker-alt"></i> Queimadinha, Feira de Santana</p>
                         <p><i class="fas fa-calendar"></i> 25 de Maio, 2024</p>
                         <p><i class="fas fa-clock"></i> 08:00 - 15:00</p>
+                        <p><i class="fas fa-tint"></i> Tipo Sanguíneo: O+</p>
                     </div>
                     <div class="progress-container">
                         <div class="progress-bar">
@@ -173,6 +190,7 @@
                         <p><i class="fas fa-map-marker-alt"></i> Serraria Brasil, Feira de Santana</p>
                         <p><i class="fas fa-calendar"></i> 1-2 de Junho, 2024</p>
                         <p><i class="fas fa-clock"></i> 08:00 - 16:00</p>
+                        <p><i class="fas fa-tint"></i> Tipo Sanguíneo: A-</p>
                     </div>
                     <div class="progress-container">
                         <div class="progress-bar">
@@ -189,6 +207,7 @@
                         <p><i class="fas fa-map-marker-alt"></i> Cidade Nova, Feira de Santana</p>
                         <p><i class="fas fa-calendar"></i> 5 de Junho, 2024</p>
                         <p><i class="fas fa-clock"></i> 09:00 - 17:00</p>
+                        <p><i class="fas fa-tint"></i> Tipo Sanguíneo: B-</p>
                     </div>
                     <div class="progress-container">
                         <div class="progress-bar">
@@ -215,5 +234,6 @@
             </nav>
         </div>
     </footer>
+    <script src="public/filtro.js"></script>
 </body>
 </html> 
