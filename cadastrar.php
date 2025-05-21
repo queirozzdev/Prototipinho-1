@@ -1,6 +1,7 @@
-
 <?php
 session_start();
+
+header('Content-Type: application/json');
 
 // Configurações do banco
 $host = 'localhost';
@@ -13,45 +14,86 @@ $charset = 'utf8mb4';
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES => false,
 ];
 
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
-    die('Erro ao conectar ao banco: ' . $e->getMessage());
+    http_response_code(500);
+    echo json_encode(['error' => 'Erro ao conectar ao banco de dados']);
+    exit;
 }
 
-// Recebe dados do formulário
+// Recebe e valida dados do formulário
 $nome = trim($_POST['nome'] ?? '');
-$email = trim($_POST['email'] ?? '');
+$email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
 $telefone = trim($_POST['telefone'] ?? '');
 $senha = $_POST['senha'] ?? '';
 $confirmar_senha = $_POST['confirmar_senha'] ?? '';
 
-// Validações básicas
-if (!$nome || !$email || !$telefone || !$senha || !$confirmar_senha) {
-    die('Por favor, preencha todos os campos.');
+// Validações
+$errors = [];
+
+if (empty($nome)) {
+    $errors[] = 'Nome é obrigatório';
+}
+
+if (!$email) {
+    $errors[] = 'Email inválido';
+}
+
+if (empty($telefone)) {
+    $errors[] = 'Telefone é obrigatório';
+}
+
+if (strlen($senha) < 6) {
+    $errors[] = 'A senha deve ter no mínimo 6 caracteres';
 }
 
 if ($senha !== $confirmar_senha) {
-    die('As senhas não coincidem.');
+    $errors[] = 'As senhas não coincidem';
 }
 
-// Verifica se email já existe
-$stmt = $pdo->prepare("SELECT id FROM usuarios WHERE email = ?");
-$stmt->execute([$email]);
-if ($stmt->fetch()) {
-    die('Email já cadastrado.');
+if (!empty($errors)) {
+    http_response_code(400);
+    echo json_encode(['errors' => $errors]);
+    exit;
 }
 
-// Criptografa a senha
-$senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+try {
+    // Verifica se email já existe
+    $stmt = $pdo->prepare("SELECT id FROM usuarios WHERE email = ?");
+    $stmt->execute([$email]);
+    if ($stmt->fetch()) {
+        http_response_code(400);
+        echo json_encode(['error' => 'Email já cadastrado']);
+        exit;
+    }
 
-// Insere no banco
-$stmt = $pdo->prepare("INSERT INTO usuarios (nome, email, telefone, senha) VALUES (?, ?, ?, ?)");
-if ($stmt->execute([$nome, $email, $telefone, $senhaHash])) {
-    echo "Cadastro realizado com sucesso! <a href='index.html'>Voltar para login</a>";
-} else {
-    echo "Erro ao cadastrar.";
+    // Criptografa a senha
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
+
+    // Insere no banco
+    $stmt = $pdo->prepare("INSERT INTO usuarios (nome, email, telefone, senha) VALUES (?, ?, ?, ?)");
+    $stmt->execute([$nome, $email, $telefone, $senhaHash]);
+
+    // Retorna sucesso com os dados do usuário (exceto senha)
+    $userId = $pdo->lastInsertId();
+    echo json_encode([
+        'success' => true,
+        'message' => 'Cadastro realizado com sucesso!',
+        'user' => [
+            'id' => $userId,
+            'nome' => $nome,
+            'email' => $email,
+            'telefone' => $telefone
+        ]
+    ]);
+
+} catch (\PDOException $e) {
+    http_response_code(500);
+    echo json_encode(['error' => 'Erro ao realizar cadastro']);
 }
 ?>
