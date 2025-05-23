@@ -162,7 +162,7 @@ body {
 }
 
 /* ==========================================
-   HERO BANNER
+  aqui é o banner vey 
    ========================================== */
 .hero-banner {
     padding: 4rem 2rem;
@@ -177,7 +177,7 @@ body {
     font-weight: 600;
 }
 
-/* Feature Cards */
+/* aqui é os Cards */
 .feature-cards {
     display: flex;
     justify-content: center;
@@ -220,7 +220,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* App Buttons */
+/* botão do aplicativo */
 .app-buttons-container {
     display: flex;
     justify-content: center;
@@ -263,7 +263,7 @@ body {
 }
 
 /* ==========================================
-   STATS BANNER
+  banner principal em baixo do menuuu
    ========================================== */
 .stats-banner {
     background: #990000;
@@ -271,6 +271,10 @@ body {
     padding: 1.5rem 0;
     margin-bottom: 2rem;
 }
+
+/* ==========================================
+   isso aqui é o conteiner dentro do banner 
+   ========================================== */
 
 .stats-container {
     max-width: 1000px;
@@ -292,12 +296,15 @@ body {
     min-width: 150px;
 }
 
+
+/* botão de criar capanhas */
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.3rem;
     color: #FFD100;
 }
+
 
 .stat-label {
     font-size: 1rem;
