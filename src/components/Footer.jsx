@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="bg-secondary-800 text-white py-8">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          {/* Logo */}
+        <div className="flex flex-col md:flex-row justify-start items-end">
+          {/* Logo - Canto inferior esquerdo */}
           <Link
             to="/"
             className="flex items-center space-x-2 text-primary-400 hover:text-primary-300 transition-colors duration-300 mb-4 md:mb-0"
@@ -17,7 +17,7 @@ const Footer = () => {
           </Link>
 
           {/* Copyright - Centralizado */}
-          <div className="text-secondary-400 text-sm mb-4 md:mb-0  ml-[1000px]">
+          <div className="text-secondary-400 text-sm mb-4 md:mb-0 ml-[1000px]">
             © 2024 HemoByte. Todos os direitos reservados.
           </div>
         </div>
